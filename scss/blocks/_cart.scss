@@ -1,0 +1,19 @@
+.cart {
+  position: relative;
+  justify-self: end;
+  align-self: center;
+}
+
+.cart__count {
+  position: absolute;
+  top: 3px;
+  right: -6px;
+  display: inline-block;
+  padding: 0 6px;
+  height: 25px;
+  line-height: 25px; //to put content in the middle, line-height should be the same as the inline-block height
+  font-family: var(--font-cards);
+  font-weight: 500;
+  border-radius: 60%;
+  background-color: var(--ui-orange);
+}

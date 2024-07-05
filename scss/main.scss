@@ -1,0 +1,23 @@
+@import "./../fonts/Gilroy/stylesheet.css";
+
+@import "./utils/reset";
+@import "./utils/vars";
+@import "./utils/mixin";
+
+@import "./base/base";
+
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/nav-list";
+@import "./blocks/cart";
+@import "./blocks/search-form";
+@import "./blocks/info-dot";
+@import "./blocks/info-hint";
+@import "./blocks/benefits";
+@import "./blocks/benefit";
+@import "./blocks/products";
+@import "./blocks/read-more";
+@import "./blocks/tabs";
+@import "./blocks/card";
+@import "./blocks/slider";
+@import "./blocks/footer";

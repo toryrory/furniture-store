@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Inter:wght@100..900&display=swap");
+
+html,
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  padding-bottom: 50vh;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.hide {
+  opacity: 0;
+  // display: none !important;
+}
+

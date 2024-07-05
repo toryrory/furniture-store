@@ -1,0 +1,19 @@
+.read-more {
+    display: inline-flex; /* to make width by content, to make cursor area be only by content */
+    gap: 13px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.85;
+    color: var(--accent);
+
+    &::after {
+        content: url("./../../images/icons/arrow-right.svg");
+        height: 24px; /* because of the line-height of link the height of arrow grow to 32px. to make it base at the center of text we write it built-in height */
+    }
+
+    &--large { /* modificator */
+        font-size: 18px;
+    }
+}
+

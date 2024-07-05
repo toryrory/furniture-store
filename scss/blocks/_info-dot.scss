@@ -1,0 +1,46 @@
+.info-dot {
+    position: relative;
+    cursor: pointer;
+
+}
+.info-dot__circle {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    width: 10px;
+    height: 10px;
+    background-color: var(--header-text-color);
+    border-radius: 50%;
+
+    transition: all 0.2s ease-in;
+
+}
+
+.info-dot__rounding {
+    width: 32px;
+    height: 32px;
+    background-color: var(--search-form-border);
+    border-radius: 50%;
+    border: 1px solid var(--header-text-color);
+    animation: pulse 1s infinite alternate;
+}
+
+.info-dot:hover .info-dot__circle{
+    background-color: var(--accent);
+}
+.info-dot:hover .info-dot__rounding{
+   animation: pulse 1s infinite alternate paused;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+} 
+100% {
+    transform: scale(1.2);
+}
+}

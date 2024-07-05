@@ -1,0 +1,9 @@
+/* @mixin - set instructions
+@include - use instructions */
+
+@mixin retina-bg ($image) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* retina */
+    background-image: $image;
+  }
+}
