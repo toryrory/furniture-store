@@ -4,6 +4,7 @@
   height: 56px;
   display: flex;
   padding: 8px 8px 8px 20px;
+  gap: 10px;
 
   border-radius: 42px;
   border: 0.86px solid var(--search-form-border);
@@ -14,7 +15,7 @@
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;
-
+flex-grow: 1;
   &::placeholder {
     color: var(--header-text-color);
     opacity: 80%;
@@ -29,4 +30,5 @@
   height: 40px;
   border-radius: 24px;
   background-color: var(--accent);
+  flex-shrink: 0;
 }
