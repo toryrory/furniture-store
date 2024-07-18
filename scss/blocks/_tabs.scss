@@ -5,11 +5,11 @@
   background-color: var(--tabs-bg);
 }
 .tab-controls__btn {
-  height: 45px;
-  padding: 7px 20px;
+  height: clamp(32px, 1.768rem + 1.16vw, 45px);
+  padding: clamp(3px, 0.116rem + 0.36vw, 7px) clamp(12px, 0.607rem + 0.71vw, 20px);
   border-radius: 32px;
 
-  font-size: 18px;
+  font-size: clamp(14px, 0.804rem + 0.36vw, 18px);
   font-weight: 500;
   line-height: 1.85;
 

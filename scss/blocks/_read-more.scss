@@ -2,7 +2,7 @@
     display: inline-flex; /* to make width by content, to make cursor area be only by content */
     gap: 13px;
     align-items: center;
-    font-size: 14px;
+    font-size: clamp(12px, 0.714rem + 0.18vw, 14px);
     font-weight: 500;
     line-height: 1.85;
     color: var(--accent);

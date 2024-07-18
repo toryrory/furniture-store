@@ -37,24 +37,28 @@ function hideAllHints() {
 // Swiper slider
 const swiper = new Swiper(".swiper", {
   // Optional params
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 42,
-  freeMode: true,
+  // freeMode: true,
 
-  // breakpoints: {
-  //   640: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40,
-  //   },
-  //   1024: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 50,
-  //   },
-  // },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1100: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1900: {
+      slidesPerView: 5,
+      spaceBetween: 52,
+    },
+  },
 
   // Navigation arrows
   navigation: {

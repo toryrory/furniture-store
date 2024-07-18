@@ -7,7 +7,7 @@
   text-align: center;
 }
 .products__tabs {
-  margin-bottom: 80px;
+  margin-bottom: clamp(40px, 1.786rem + 3.57vw, 80px);
   text-align: center;
 }
 .products__slider {

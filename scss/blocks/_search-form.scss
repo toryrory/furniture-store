@@ -10,7 +10,12 @@
   border: 0.86px solid var(--search-form-border);
   justify-content: space-between;
   background-color: var(--search-form-bg);
+
+  @include mobile-xl {
+    display: none;
+  }
 }
+
 .search-form__input {
   font-size: 18px;
   line-height: 1.5;
