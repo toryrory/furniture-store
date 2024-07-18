@@ -1,0 +1,19 @@
+.subnav {
+  display: grid;
+  gap: 16px;
+  background-color: var(--search-form-bg);
+  padding: 10px 15px;
+  border-radius: 16px;
+  color: var(--footer-text-color);
+  font-size: 15px;
+}
+
+.subnav__item {
+}
+
+.subnav__link {
+  transition: color 100ms ease-in;
+  &:hover {
+    color: var(--accent);
+  }
+}

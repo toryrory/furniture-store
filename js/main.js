@@ -1,3 +1,4 @@
+// Header info-dots
 const infoBtns = document.querySelectorAll(".info-dot");
 const infoHints = document.querySelectorAll(".info-hint");
 
@@ -9,6 +10,12 @@ for (let btn of infoBtns) {
   function showHint(e) {
     e.stopPropagation(); // to prevent the event from resurfacing further to the parents and the entire document. Then the document event that returns the hide class will not work
     const infoHint = this.parentNode.querySelector(".info-hint");
+
+    // Hide all hints before show one
+    for (let hint of infoHints) {
+      hint.classList.add("hide");
+    }
+    // Show current hint
     infoHint.classList.toggle("hide");
   }
 }
@@ -61,39 +68,61 @@ const swiper = new Swiper(".swiper", {
 const tabsBtns = document.querySelectorAll("[data-tab]");
 const tabsProducts = document.querySelectorAll("[data-tab-value]");
 
+function toggleActiveTabBtn(activeBtn) {
+  //  Remove active tab button
+  for (let btn of tabsBtns) {
+    btn.classList.remove("tab-controls__btn--active");
+  }
+
+  //  Add active tab button after click on it
+  activeBtn.classList.add("tab-controls__btn--active");
+}
+
 for (let btn of tabsBtns) {
   btn.addEventListener("click", changeCategory);
 
-  function changeCategory(e) {
+  function changeCategory() {
     const btnCategory = btn.dataset.tab;
 
-    //  Remove active tab button
-    for (let btn of tabsBtns) {
-      btn.classList.remove("tab-controls__btn--active");
-    }
-
-    //  Add active tab button
-    btn.classList.add("tab-controls__btn--active");
+    toggleActiveTabBtn(btn);
 
     // Find product category corresponding to the button and hide not relevant categories
     for (let product of tabsProducts) {
       const productCategory = product.dataset.tabValue;
 
-      // Remove class hide from all cards before adding it to relevant card
-      if (btnCategory === productCategory) {
+      // Show all cards onclick btn "All"
+      if (btnCategory === "all") {
         product.classList.remove("hide");
-      } else if (btnCategory !== productCategory) {
-        product.classList.add("hide");
+      } else {
+        // Remove class hide from all cards before adding it to relevant card
+        // if (btnCategory === productCategory) {
+        //   product.classList.remove("hide");
+        // } else if (btnCategory !== productCategory) {
+        //   product.classList.add("hide");
+        // }
+
+        // Another variant of Remove class hide from all cards before adding it to relevant card
+        product.classList.contains("hide")
+          ? product.classList.remove("hide")
+          : null;
+
+        if (productCategory !== btnCategory) {
+          product.classList.add("hide");
+        }
+        swiper.update(); // Update swiper after DOM manipulations to make swiper btns work correctly
       }
-
-      // Another variant of Remove class hide from all cards before adding it to relevant card
-      // product.classList.contains("hide")
-      //   ? product.classList.remove("hide")
-      //   : null;
-
-      // if (productCategory !== btnCategory) {
-      //   product.classList.add("hide");
-      // }
     }
   }
 }
+
+//  Tablet navigation
+const openNavBtn = document.querySelector(".nav__btn-open");
+const closeNavBtn = document.querySelector(".tablet-nav__btn-close");
+const navMenu = document.querySelector(".tablet-nav");
+
+openNavBtn.onclick = function () {
+  navMenu.classList.add("tablet-nav--open");
+};
+closeNavBtn.onclick = function () {
+  navMenu.classList.remove("tablet-nav--open");
+};

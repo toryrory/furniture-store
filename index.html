@@ -13,13 +13,21 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header__nav nav">
+        <nav class="header__nav nav ">
           <div class="nav__logo">
             <a href="#!" class="logo">Panto</a>
           </div>
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a href="#!" class="nav-list__link">Furniture</a>
+              <a href="#!" class="nav-list__link nav-list__link--dropdown">Furniture</a>
+              <div class="nav-list__subnav">
+                <ul class="subnav">
+                  <li class="subnav__item"> <a href="#!" class="subnav__link">Beds</a></li>
+                  <li class="subnav__item"> <a href="#!" class="subnav__link">Sofa</a></li>
+                  <li class="subnav__item"> <a href="#!" class="subnav__link">Lamp</a></li>
+                  <li class="subnav__item"> <a href="#!" class="subnav__link">Chair</a></li>
+                </ul>
+              </div>
             </li>
             <li class="nav-list__item">
               <a href="#!" class="nav-list__link">Shop</a>
@@ -36,18 +44,18 @@
             <img class="cart__img" src="./images/icons/cart.svg" alt="cart" />
             <div class="cart__count">0</div>
           </a>
+          <button type="button" class="nav__btn-open"><img src="./images/icons/mobile-nav.svg" alt="open mobile navigation"></button>
         </nav>
-        <div class="header__content">
+        <div class="header__content ">
           <h1 class="header__title">
             Make your interior more minimalistic & modern
           </h1>
-
-          <p class="header__text">
+          <p class="header__text ">
             Turn your room with panto into a lot more minimalist <br>and modern
             with
             ease and speed</br>
         </p>
-        <form action class="header__search search-form">
+        <form action class="header__search search-form ">
           <input class="search-form__input" placeholder="Search furniture"
             type="text" autocomplete="off" />
           <button class="search-form__btn">
@@ -56,7 +64,7 @@
           </button>
         </form>
       </div>
-      <div class="header__dot-sofa">
+      <div class="header__dot-sofa ">
         <button class="info-dot">
           <div class="info-dot__circle"></div>
           <div class="info-dot__rounding"></div>
@@ -73,7 +81,7 @@
           </label>
         </div>
       </div>
-      <div class="header__dot-vase">
+      <div class="header__dot-vase ">
         <button class="info-dot">
           <div class="info-dot__circle"></div>
           <div class="info-dot__rounding"></div>
@@ -90,7 +98,7 @@
           </label>
         </div>
       </div>
-      <div class="header__dot-item">
+      <div class="header__dot-item ">
         <button class="info-dot">
           <div class="info-dot__circle"></div>
           <div class="info-dot__rounding"></div>
@@ -107,7 +115,7 @@
           </label>
         </div>
       </div>
-      <div class="header__dot-wall">
+      <div class="header__dot-wall ">
         <button class="info-dot">
           <div class="info-dot__circle"></div>
           <div class="info-dot__rounding"></div>
@@ -126,8 +134,9 @@
       </div>
 
     </div>
+    
   </header>
-  <section class="benefits">
+  <section class="benefits hide">
     <div class="container">
       <div class="benefits__grid">
         <h2 class="benefits__title"> Why Choosing Us</h2>
@@ -161,11 +170,12 @@
       </div>
     </div>
   </section>
-  <section class="products">
+  <section class="products hide">
     <div class="container">
       <h2 class="products__title">Best Selling Product</h2>
       <div class="products__tabs">
         <div class="tab-controls">
+          <button class="tab-controls__btn tab-controls__btn--active"  data-tab="all">All</button>
           <button class="tab-controls__btn"  data-tab="chair">Chair</button>
           <button class="tab-controls__btn" data-tab="beds">Beds</button>
           <button class="tab-controls__btn" data-tab="sofa">Sofa</button>
@@ -919,7 +929,7 @@
         <a class="read-more read-more--large" href="#!">View All</a>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container container--small">
         <div class="footer__grid">
           <div class="footer__desc">
@@ -956,6 +966,43 @@
         </div>
       </div>
     </footer>
+
+<!-- separated component for mobile-tablet navigation-->
+    <div class="tablet-nav">
+      <div class="tablet-nav__header">
+        <a href="#!" class="tablet-nav__cart">
+        <div  class="cart">
+            <img class="cart__img" src="./images/icons/cart.svg" alt="cart" />
+            <div class="cart__count">0</div>
+          </div>
+        Cart</a>
+        <button class="tablet-nav__btn-close">
+          <img src="./images/icons/close.svg" alt="close tablet nav">
+        </button>
+      </div>
+      <ul class="tablet-nav__list">
+            <li class="tablet-nav__item">
+              <a href="#cart" class="tablet-nav__link tablet-nav__link--dropdown">Furniture</a>
+                <ul class="tablet-subnav">
+                  <li class="tablet-subnav__item"> <a href="#!" class="tablet-subnav__link">Beds</a></li>
+                  <li class="tablet-subnav__item"> <a href="#!" class="tablet-subnav__link">Sofa</a></li>
+                  <li class="tablet-subnav__item"> <a href="#!" class="tablet-subnav__link">Lamp</a></li>
+                  <li class="tablet-subnav__item"> <a href="#!" class="tablet-subnav__link">Chair</a></li>
+                </ul>
+            </li>
+            <li class="tablet-nav__item">
+              <a href="#!" class="tablet-nav__link">Shop</a>
+            </li>
+            <li class="tablet-nav__item">
+              <a href="#!" class="tablet-nav__link">About Us</a>
+            </li>
+            <li class="tablet-nav__item">
+              <a href="#!" class="tablet-nav__link">Contact</a>
+            </li>
+      </ul>
+        </div>
+    <!-- separated component for mobile-tablet navigation-->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

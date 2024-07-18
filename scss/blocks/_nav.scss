@@ -1,12 +1,21 @@
-
 .nav {
-    display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
-    gap: 20px;
-    
-}
-.nav__logo {
-align-self: center;
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  gap: 20px;
 }
 
+.nav__logo {
+  align-self: center;
+}
+
+/* Tablet view */
+
+.nav__btn-open {
+  display: none;
+  
+  @include tablet {
+    display: block;
+  }
+
+}
 
