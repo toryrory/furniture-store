@@ -1,10 +1,12 @@
 .header {
   position: relative;
   padding-top: 40px;
+  padding-bottom: 240px;
 
   background-color: var(--footer-bg);
   background-image: url("./../../images/header/header-bg.jpg");
   background-size: cover;
+  background-position: center;
   aspect-ratio: 1440 / 1084;
 
   color: var(--header-text-color);
@@ -17,6 +19,10 @@
 
   @include tablet {
     position: static;
+  }
+  @include mobile {
+    padding-top: 20px;
+    aspect-ratio: unset;
   }
 }
 

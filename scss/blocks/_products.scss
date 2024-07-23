@@ -11,7 +11,11 @@
   text-align: center;
 }
 .products__slider {
-  margin-bottom: 60px;
+  margin-bottom: clamp(30px, 1.339rem + 2.68vw, 60px);
+
+  @include desktop-s {
+    padding: 0 20px;
+  }
 }
 .products__link {
   text-align: center;

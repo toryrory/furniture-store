@@ -8,11 +8,18 @@
   }
 }
 
+@mixin desktop-s {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: 992px) {
     @content;
   }
 }
+
 @mixin mobile-xl {
  @media (max-width: 819px) {
     @content;
