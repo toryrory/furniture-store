@@ -170,7 +170,7 @@ body {
   padding-top: 40px;
   padding-bottom: 240px;
   background-color: var(--footer-bg);
-  background-image: url("./../../images/header/header-bg.jpg");
+  background-image: url("./../images/header/header-bg.jpg");
   background-size: cover;
   background-position: center;
   aspect-ratio: 1440/1084;
@@ -179,7 +179,7 @@ body {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .header {
     /* retina */
-    background-image: url("./../../images/header/header-bg@2x.jpg");
+    background-image: url("./../images/header/header-bg@2x.jpg");
   }
 }
 .header a {
@@ -311,7 +311,7 @@ body {
   gap: 8px;
 }
 .nav-list__link--dropdown::after {
-  content: url("./../../images/icons/arrow-bottom.svg");
+  content: url("./../images/icons/arrow-bottom.svg");
   height: 18px;
 }
 
@@ -587,7 +587,7 @@ body {
   color: var(--accent);
 }
 .read-more::after {
-  content: url("./../../images/icons/arrow-right.svg");
+  content: url("./../images/icons/arrow-right.svg");
   height: 24px; /* because of the line-height of link the height of arrow grow to 32px. to make it base at the center of text we write it built-in height */
 }
 .read-more--large { /* modificator */

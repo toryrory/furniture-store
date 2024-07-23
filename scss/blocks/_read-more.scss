@@ -8,7 +8,7 @@
     color: var(--accent);
 
     &::after {
-        content: url("./../../images/icons/arrow-right.svg");
+        content: url("./../images/icons/arrow-right.svg");
         height: 24px; /* because of the line-height of link the height of arrow grow to 32px. to make it base at the center of text we write it built-in height */
     }
 
