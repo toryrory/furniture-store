@@ -331,7 +331,6 @@ body {
   pointer-events: all;
 }
 
-/* Tablet view */
 .subnav {
   display: grid;
   gap: 16px;
@@ -470,7 +469,7 @@ body {
   width: 112px;
   height: 56px;
   padding-top: 12px;
-  background-image: url("./../../images/icons/tooltip.svg");
+  background-image: url("./../images/icons/tooltip.svg");
 }
 
 .info-hint__radio {
@@ -485,7 +484,7 @@ body {
 }
 
 .info-hint__radio:checked + .info-hint__radio-fake {
-  background-image: url("./../../images/icons/check-no-shadow.svg");
+  background-image: url("./../images/icons/check-no-shadow.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
